@@ -1,0 +1,22 @@
+Kong Tx Debugger
+Copyright 2020 Optum
+
+Project Description:
+====================
+
+The Kong Tx Debugger is a small, lua-based, OpenResty Nginx module which helps log API transaction data to Kong's STDOUT for debugging purposes.
+
+Authors:
+Jeremy Justus, ©Optum 2020
+
+Added Files:
+============
+
+
+
+
+
+Modified Files:
+===============
+schema.lua
+handler.lua
