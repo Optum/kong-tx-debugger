@@ -2,10 +2,10 @@
 Log API Request and Response Data to Kong STDOUT
 
 ## Configuration
-You can add the plugin with the following request:
+You can add the plugin to a ```route``` kong resource with the following request:
 
 ```bash
-$ curl -X POST http://kong:8001/apis/{api}/plugins \
+$ curl -X POST http://kong:8001/routes/{route name or id}/plugins \
     --data "name=kong-tx-debugger" \
     --data "config.log_request_headers=true" \
     --data "config.log_request_query_params=true" \
@@ -44,7 +44,7 @@ $ curl -X POST http://kong:8001/apis/{api}/plugins \
 2020/09/08 19:07:31 [notice] 19456#0: *9908058 [kong] handler.lua:88 [kong-tx-debugger] -------- END OF LOGGED TX -------- while logging request, client: 10.xxx.xxx.x, server: kong, request: "GET /some/route HTTP/1.1", host: "some-host.company.com"
 ```
 
-We recommend applying this to individual kong ```route``` resources and be sure to remove it when done debugging, as all the additional logging and request/response body reading.
+We recommend applying this to individual kong ```route``` or ```service``` resource and be sure to remove it when done debugging, as all the additional logging and request/response body reading.
 
 
 ## Supported Kong Releases
